@@ -21,16 +21,9 @@ const MyApp = ({ Component, pageProps }) => (
         <Component {...pageProps} />
       </Layout>
     </ChakraProvider>
+    <Component {...pageProps} />
+    <Analytics />
   </>
 );
-
-function MyApp({ Component, pageProps }) {
-  return (
-    <>
-      <Component {...pageProps} />
-      <Analytics />
-    </>
-  );
-}
 
 export default MyApp;
