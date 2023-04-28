@@ -53,41 +53,6 @@ const Footer = () => {
           ))}
         </Box>
         <Box py="2">
-          <Text>
-            Built with{" "}
-            <span role="img" aria-label="red heart">
-              ❤️
-            </span>
-            ,{" "}
-            <ChakraLink
-              href="https://nextjs.org/"
-              fontWeight="600"
-              _focus={{ outline: "none" }}
-              isExternal
-            >
-              Next.js
-            </ChakraLink>
-            ,{" "}
-            <ChakraLink
-              href="https://chakra-ui.com/"
-              fontWeight="600"
-              _focus={{ outline: "none" }}
-              isExternal
-            >
-              Chakra UI
-            </ChakraLink>
-            , Hosted in{" "}
-            <ChakraLink
-              href="http://vercel.com/"
-              fontWeight="600"
-              _focus={{ outline: "none" }}
-              isExternal
-            >
-              Vercel.
-            </ChakraLink>
-          </Text>
-        </Box>
-        <Box py="2">
           <ChakraLink
             href="https://github.com/kalebhirshfield/portfolio"
             aria-label="source code"

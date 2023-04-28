@@ -1,21 +1,15 @@
-import {
-  Box,
-  Button,
-  Heading,
-  Text,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Box, Heading, Text, useColorModeValue } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 import NextImage from "next/image";
 
 import { seo, data } from "config";
 
-const Home = () => {
+const About = () => {
   const color = useColorModeValue("telegram.500", "telegram.400");
 
   const isOdd = (num) => num % 2;
 
-  const title = "Kaleb Hirshfield - Home";
+  const title = "Kaleb Hirshfield - About";
   const description = seo.description;
 
   return (
@@ -46,57 +40,13 @@ const Home = () => {
         textAlign="center"
         py="4"
       >
-        <NextImage
-          className="logo"
-          src="/personalLogo.png"
-          width="350"
-          height="350"
-          alt="my logo"
-          placeholder="blur"
-          blurDataURL="L5I~of#i004mgjw]-4XA00?wL#xu"
-          priority
-        />
         <Box>
-          <Heading
-            className="typewriter"
-            as="h1"
-            fontSize="2xl"
-            fontWeight="500"
-            py="2"
-          >
-            Hello, I'm Kaleb Hirshfield.{" "}
-            <span role="img" aria-label="hand">
-              👋🏻
-            </span>
-          </Heading>
-          <Heading fontSize={["3xl", "4xl"]} fontWeight="700">
-            <Text as="span" color={color}>
-              Studying
-            </Text>{" "}
-            A Level Maths, Physics and Computer Science.
-          </Heading>
-          <Text py="4">
-            A passionate{" "}
-            <Text as="span" fontWeight="600">
-              developer
-            </Text>
-            ,{" "}
-            <Text as="span" fontWeight="600">
-              racing driver
-            </Text>{" "}
-            and{" "}
-            <Text as="span" fontWeight="600">
-              student.
-            </Text>
+          <Text py="4" fontSize={["3xl", "4xl"]} fontWeight="700">
+            As a Jewish A Level student studying maths, physics and computer
+            science, I strive for success in engineering and software
+            development, with hobbies including car racing and solving intricate
+            puzzles.
           </Text>
-          <Button
-            colorScheme="telegram"
-            variant="ghost"
-            size="lg"
-            fontSize="20px"
-          >
-            Get in touch
-          </Button>
         </Box>
       </Box>
 
@@ -143,4 +93,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default About;

@@ -57,6 +57,9 @@ const Navbar = () => {
           px={{ lg: "8" }}
           py={{ base: "3", lg: "0" }}
         ></chakra.li>
+        <NextLink href="/about" onClick={closeMenu}>
+          About
+        </NextLink>
       </chakra.ul>
 
       <ColorModeToggle />
