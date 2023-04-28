@@ -15,7 +15,7 @@ const Home = () => {
 
   const isOdd = (num) => num % 2;
 
-  const title = "Home";
+  const title = "Kaleb Hirshfield - Home";
   const description = seo.description;
 
   return (
@@ -57,7 +57,7 @@ const Home = () => {
         />
         <Box>
           <Heading as="h1" fontSize="2xl" fontWeight="500" py="2">
-            Hi, I'm John Doe{" "}
+            Hi, I'm Kaleb Hirshfield{" "}
             <span role="img" aria-label="hand">
               👋🏻
             </span>

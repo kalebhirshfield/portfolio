@@ -47,8 +47,8 @@ const Navbar = () => {
           px={{ lg: "8" }}
           py={{ base: "3", lg: "0" }}
         >
-          <NextLink href="/">
-            <a onClick={closeMenu}>Home</a>
+          <NextLink href="/" onClick={closeMenu}>
+            Home
           </NextLink>
         </chakra.li>
 
@@ -56,11 +56,7 @@ const Navbar = () => {
           listStyleType="none"
           px={{ lg: "8" }}
           py={{ base: "3", lg: "0" }}
-        >
-          <NextLink href="/blog">
-            <a onClick={closeMenu}>Blog</a>
-          </NextLink>
-        </chakra.li>
+        ></chakra.li>
       </chakra.ul>
 
       <ColorModeToggle />

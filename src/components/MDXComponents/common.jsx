@@ -7,7 +7,7 @@ export const CustomLink = (props) => {
 
   if (isInternalLink) {
     return (
-      <NextLink href={href} passHref>
+      <NextLink href={href} passHref legacyBehavior>
         <ChakraLink {...props} />
       </NextLink>
     );

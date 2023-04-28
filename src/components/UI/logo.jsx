@@ -3,7 +3,7 @@ import NextLink from "next/link";
 
 const Logo = () => {
   return (
-    <NextLink href="/" passHref>
+    <NextLink href="/" passHref legacyBehavior>
       <chakra.a fontSize="2rem" fontWeight="700">
         LOGO
       </chakra.a>
