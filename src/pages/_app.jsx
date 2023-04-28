@@ -1,5 +1,6 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import { DefaultSeo } from "next-seo";
+import { Analytics } from "@vercel/analytics/react";
 
 import theme from "@/theme/index";
 import Layout from "@/layouts/global";
@@ -22,5 +23,14 @@ const MyApp = ({ Component, pageProps }) => (
     </ChakraProvider>
   </>
 );
+
+function MyApp({ Component, pageProps }) {
+  return (
+    <>
+      <Component {...pageProps} />
+      <Analytics />
+    </>
+  );
+}
 
 export default MyApp;
