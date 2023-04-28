@@ -47,6 +47,7 @@ const Home = () => {
         py="4"
       >
         <NextImage
+          className="logo"
           src="/personalLogo.png"
           width="350"
           height="350"
@@ -64,21 +65,23 @@ const Home = () => {
           </Heading>
           <Heading fontSize={["3xl", "4xl"]} fontWeight="700">
             <Text as="span" color={color}>
-              Building
+              Studying
             </Text>{" "}
-            digital products, Brands, And experience.
+            A Level Maths, Physics and Computer Science.
           </Heading>
           <Text py="4">
-            A{" "}
+            A passionate{" "}
             <Text as="span" fontWeight="600">
-              web designer
+              developer
+            </Text>
+            ,{" "}
+            <Text as="span" fontWeight="600">
+              racing driver
             </Text>{" "}
             and{" "}
             <Text as="span" fontWeight="600">
-              front-end web developer
-            </Text>{" "}
-            based in the US, I specialize in UI/UX design, Responsive web
-            design, And accessibility.
+              student.
+            </Text>
           </Text>
           <Button
             colorScheme="telegram"

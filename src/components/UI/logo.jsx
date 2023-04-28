@@ -5,7 +5,7 @@ const Logo = () => {
   return (
     <NextLink href="/" passHref legacyBehavior>
       <chakra.a fontSize="2rem" fontWeight="700">
-        LOGO
+        Kaleb Hirshfield
       </chakra.a>
     </NextLink>
   );
