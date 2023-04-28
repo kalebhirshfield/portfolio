@@ -47,10 +47,10 @@ const Home = () => {
         py="4"
       >
         <NextImage
-          src="/bighead.svg"
+          src="/personalLogo.png"
           width="350"
           height="350"
-          alt="avatar bigheads"
+          alt="my logo"
           placeholder="blur"
           blurDataURL="L5I~of#i004mgjw]-4XA00?wL#xu"
           priority
