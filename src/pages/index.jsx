@@ -29,10 +29,10 @@ const Home = () => {
           description,
           images: [
             {
-              url: `${seo.canonical}bighead.svg`,
+              url: `${seo.canonical}personalLogo.png`,
               width: "350px",
               height: "350px",
-              alt: "avatar bigheads",
+              alt: "my logo",
             },
           ],
         }}
