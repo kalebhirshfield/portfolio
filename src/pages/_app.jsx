@@ -21,7 +21,6 @@ const MyApp = ({ Component, pageProps }) => (
         <Component {...pageProps} />
       </Layout>
     </ChakraProvider>
-    <Component {...pageProps} />
     <Analytics />
   </>
 );
