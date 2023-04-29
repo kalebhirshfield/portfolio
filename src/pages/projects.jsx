@@ -44,7 +44,7 @@ const Projects = () => {
         >
           <Box>
             <Text py="4" fontSize={["3xl", "4xl"]} fontWeight="700">
-              Under contruction...
+              Under construction...
             </Text>
           </Box>
         </Box>
