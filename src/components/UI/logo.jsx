@@ -4,8 +4,8 @@ import NextLink from "next/link";
 const Logo = () => {
   return (
     <NextLink href="/" passHref legacyBehavior>
-      <chakra.a fontSize="30" fontWeight="700">
-        Kaleb Hirshfield
+      <chakra.a fontSize="2rem" fontWeight="700">
+        Kaleb
       </chakra.a>
     </NextLink>
   );

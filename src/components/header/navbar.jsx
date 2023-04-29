@@ -51,7 +51,15 @@ const Navbar = () => {
             Home
           </NextLink>
         </chakra.li>
-
+        <chakra.li
+          listStyleType="none"
+          px={{ lg: "8" }}
+          py={{ base: "3", lg: "0" }}
+        >
+          <NextLink href="/projects" onClick={closeMenu}>
+            Projects
+          </NextLink>
+        </chakra.li>
         <chakra.li
           listStyleType="none"
           px={{ lg: "8" }}

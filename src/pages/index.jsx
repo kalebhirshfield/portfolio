@@ -1,12 +1,7 @@
-import {
-  Box,
-  Button,
-  Heading,
-  Text,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Box, Heading, Text, useColorModeValue } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 import NextImage from "next/image";
+import FadeIn from "@rcnoverwatcher/react-fade-in-react-18";
 
 import { seo, data } from "config";
 
@@ -20,125 +15,119 @@ const Home = () => {
 
   return (
     <>
-      <NextSeo
-        title={title}
-        description={description}
-        canonical={seo.canonical}
-        openGraph={{
-          title,
-          description,
-          images: [
-            {
-              url: `${seo.canonical}personalLogo.png`,
-              width: "350px",
-              height: "350px",
-              alt: "my logo",
-            },
-          ],
-        }}
-      />
-
-      <Box
-        as="section"
-        d="flex"
-        alignItems="center"
-        flexDir="column"
-        textAlign="center"
-        py="4"
-      >
-        <NextImage
-          className="logo"
-          src="/personalLogo.png"
-          width="350"
-          height="350"
-          alt="my logo"
-          placeholder="blur"
-          blurDataURL="L5I~of#i004mgjw]-4XA00?wL#xu"
-          priority
+      <FadeIn>
+        <NextSeo
+          title={title}
+          description={description}
+          canonical={seo.canonical}
+          openGraph={{
+            title,
+            description,
+            images: [
+              {
+                url: `${seo.canonical}personalLogo.png`,
+                width: "350px",
+                height: "350px",
+                alt: "my logo",
+              },
+            ],
+          }}
         />
-        <Box>
-          <Heading
-            className="typewriter"
-            as="h1"
-            fontSize="2xl"
-            fontWeight="500"
-            py="2"
-          >
-            Hello, I'm Kaleb Hirshfield.{" "}
-            <span role="img" aria-label="hand">
-              👋🏻
-            </span>
-          </Heading>
-          <Heading fontSize={["3xl", "4xl"]} fontWeight="700">
-            <Text as="span" color={color}>
-              Studying
-            </Text>{" "}
-            A Level Maths, Physics and Computer Science.
-          </Heading>
-          <Text py="4">
-            A passionate{" "}
-            <Text as="span" fontWeight="600">
-              developer
-            </Text>
-            ,{" "}
-            <Text as="span" fontWeight="600">
-              racing driver
-            </Text>{" "}
-            and{" "}
-            <Text as="span" fontWeight="600">
-              student.
-            </Text>
-          </Text>
-          <Button
-            colorScheme="telegram"
-            variant="ghost"
-            size="lg"
-            fontSize="20px"
-          >
-            Get in touch
-          </Button>
-        </Box>
-      </Box>
 
-      <Box
-        as="section"
-        d="flex"
-        alignItems="center"
-        flexDir="column"
-        textAlign={{ base: "center", lg: "left" }}
-        py="4"
-      >
-        {data.map((item, index) => (
-          <Box
-            d={{ lg: "flex" }}
-            justifyContent={{ lg: "center" }}
-            alignItems={{ lg: "center" }}
-            flexDir={{ lg: isOdd(index) == 1 && "row-reverse" }}
-            key={index}
-          >
-            <Box
-              w={{ base: "80%", lg: "35%" }}
-              mx={{ base: "auto", lg: "0" }}
-              pl={{ lg: isOdd(index) == 1 && "10" }}
-              pr={{ lg: isOdd(index) == 0 && "10" }}
+        <Box
+          as="section"
+          d="flex"
+          alignItems="center"
+          flexDir="column"
+          textAlign="center"
+          py="4"
+        >
+          <NextImage
+            className="logo"
+            src="/personalLogo.png"
+            width="350"
+            height="350"
+            alt="my logo"
+            placeholder="blur"
+            blurDataURL="L5I~of#i004mgjw]-4XA00?wL#xu"
+            priority
+          />
+          <Box>
+            <Heading
+              className="typewriter"
+              as="h1"
+              fontSize="2xl"
+              fontWeight="500"
+              py="2"
             >
-              <NextImage
-                src={item.image}
-                width="500"
-                height="500"
-                alt={item.title}
-                placeholder="blur"
-                blurDataURL="L8LE.{~60000_3V@ITx^00t:V?-P"
-              />
-            </Box>
-
-            <Box w={{ lg: "50%" }}>
-              <Heading as="h1">{item.title}</Heading>
-              <Text py="4">{item.description}</Text>
-            </Box>
+              Hello, I'm Kaleb.{" "}
+              <span role="img" aria-label="hand">
+                👋🏻
+              </span>
+            </Heading>
+            <Heading fontSize={["3xl", "4xl"]} fontWeight="700">
+              <Text as="span" color={color}>
+                Studying
+              </Text>{" "}
+              A Level Maths, Physics and Computer Science.
+            </Heading>
+            <Text py="4">
+              A passionate{" "}
+              <Text as="span" fontWeight="600">
+                developer
+              </Text>
+              ,{" "}
+              <Text as="span" fontWeight="600">
+                racing driver
+              </Text>{" "}
+              and{" "}
+              <Text as="span" fontWeight="600">
+                student.
+              </Text>
+            </Text>
           </Box>
-        ))}
-      </Box>
+        </Box>
+
+        <Box
+          as="section"
+          d="flex"
+          alignItems="center"
+          flexDir="column"
+          textAlign={{ base: "center", lg: "left" }}
+          py="4"
+        >
+          {data.map((item, index) => (
+            <Box
+              d={{ lg: "flex" }}
+              justifyContent={{ lg: "center" }}
+              alignItems={{ lg: "center" }}
+              flexDir={{ lg: isOdd(index) == 1 && "row-reverse" }}
+              key={index}
+            >
+              <Box
+                w={{ base: "80%", lg: "35%" }}
+                mx={{ base: "auto", lg: "0" }}
+                pl={{ lg: isOdd(index) == 1 && "10" }}
+                pr={{ lg: isOdd(index) == 0 && "10" }}
+              >
+                <NextImage
+                  src={item.image}
+                  width="500"
+                  height="500"
+                  alt={item.title}
+                  placeholder="blur"
+                  blurDataURL="L8LE.{~60000_3V@ITx^00t:V?-P"
+                />
+              </Box>
+
+              <Box w={{ lg: "50%" }}>
+                <Heading as="h1">{item.title}</Heading>
+                <Text py="4">{item.description}</Text>
+              </Box>
+            </Box>
+          ))}
+        </Box>
+      </FadeIn>
     </>
   );
 };

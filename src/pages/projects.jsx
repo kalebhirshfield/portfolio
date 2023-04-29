@@ -5,12 +5,12 @@ import NextImage from "next/image";
 import { seo, data } from "config";
 import FadeIn from "@rcnoverwatcher/react-fade-in-react-18/lib/FadeIn";
 
-const About = () => {
+const Projects = () => {
   const color = useColorModeValue("telegram.500", "telegram.400");
 
   const isOdd = (num) => num % 2;
 
-  const title = "Kaleb Hirshfield - About";
+  const title = "Kaleb Hirshfield - Projects";
   const description = seo.description;
 
   return (
@@ -25,33 +25,15 @@ const About = () => {
             description,
             images: [
               {
-                url: `${seo.canonical}aboutMe.png`,
+                url: `${seo.canonical}personalLogo.png`,
                 width: "350px",
                 height: "350px",
-                alt: "picture of me",
+                alt: "my logo",
               },
             ],
           }}
         />
-        <Box
-          as="section"
-          d="flex"
-          alignItems="center"
-          flexDir="column"
-          textAlign="center"
-          py="4"
-        >
-          <NextImage
-            className="logo"
-            src="/aboutMe.png"
-            width="350"
-            height="350"
-            alt="picture of me"
-            placeholder="blur"
-            blurDataURL="L5I~of#i004mgjw]-4XA00?wL#xu"
-            priority
-          />
-        </Box>
+
         <Box
           as="section"
           d="flex"
@@ -62,9 +44,7 @@ const About = () => {
         >
           <Box>
             <Text py="4" fontSize={["3xl", "4xl"]} fontWeight="700">
-              As a Jewish A Level student studying maths, physics and computer
-              science, I strive for success in engineering and software
-              development, with car racing being my main hobby
+              Under contruction...
             </Text>
           </Box>
         </Box>
@@ -113,4 +93,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Projects;
