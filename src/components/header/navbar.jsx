@@ -64,10 +64,11 @@ const Navbar = () => {
           listStyleType="none"
           px={{ lg: "8" }}
           py={{ base: "3", lg: "0" }}
-        ></chakra.li>
-        <NextLink href="/about" onClick={closeMenu}>
-          About
-        </NextLink>
+        >
+          <NextLink href="/about" onClick={closeMenu}>
+            About
+          </NextLink>
+        </chakra.li>
       </chakra.ul>
 
       <ColorModeToggle />
