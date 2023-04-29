@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Under construction...",
-    "image": "/personallogo.png",
+    "image": "/personalLogo.png",
     "description": "Placeholder description",
     "tags": ["tag1", "tag2", "tag3"],
     "source_code": "https://github.com/kalebhirshfield/portfolio",
