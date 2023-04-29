@@ -7,7 +7,7 @@ const DarkModeToggle = () => {
   return (
     <Button
       aria-label={
-        colorMode === "light" ? "switch to dark mode" : "switch to light mode"
+        colorMode === "dark" ? "switch to dark mode" : "switch to light mode"
       }
       ml={{ lg: "6" }}
       variant="ghost"
