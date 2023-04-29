@@ -1,8 +1,15 @@
-import { Box, Heading, Text, useColorModeValue } from "@chakra-ui/react";
+import {
+  Box,
+  Heading,
+  Text,
+  useColorModeValue,
+  Button,
+  Link as ChakraLink,
+} from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 import NextImage from "next/image";
 import FadeIn from "@rcnoverwatcher/react-fade-in-react-18";
-import Typewriter from 'typewriter-effect';
+import Typewriter from "typewriter-effect";
 
 import { seo, data } from "config";
 
@@ -54,43 +61,27 @@ const Home = () => {
             priority
           />
           <Box>
-            <Heading
-              as="h1"
-              fontSize="2xl"
-              fontWeight="500"
-              py="2"
-            >
+            <Heading as="h1" fontSize="2xl" fontWeight="500" py="2">
               <Typewriter
-                  options={{
-                    autoStart: true,
-                    delay: 75,
-                  }}
-                  onInit={(typewriter) => {
-                    typewriter.typeString("Hello, I'm Kaleb.")
-                        .start();
-                  }}
+                options={{
+                  autoStart: true,
+                  delay: 75,
+                }}
+                onInit={(typewriter) => {
+                  typewriter.typeString("Hello, I'm Kaleb.").start();
+                }}
               />
             </Heading>
-            <Heading fontSize={["3xl", "4xl"]} fontWeight="700">
-              <Text as="span" color={color}>
-                Studying
-              </Text>{" "}
-              A Level Maths, Physics and Computer Science.
-            </Heading>
-            <Text py="4">
-              A passionate{" "}
-              <Text as="span" fontWeight="600">
-                developer
-              </Text>
-              ,{" "}
-              <Text as="span" fontWeight="600">
-                racing driver
-              </Text>{" "}
-              and{" "}
-              <Text as="span" fontWeight="600">
-                student.
-              </Text>
-            </Text>
+            <Button>
+              <ChakraLink className="links" href="/about">
+                Projects
+              </ChakraLink>
+            </Button>
+            <Button>
+              <ChakraLink className="links" href="/about">
+                About Me
+              </ChakraLink>
+            </Button>
           </Box>
         </Box>
 
