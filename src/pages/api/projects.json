@@ -1,0 +1,11 @@
+[
+  {
+    "id": 1,
+    "name": "Raspberry PyGame",
+    "image": "https://kalebhirshfielduk.files.wordpress.com/2022/10/personallogo.png",
+    "description": "Placeholder description",
+    "tags": ["placeholder1", "placeholder2", "placeholder3"],
+    "source_code": "https://github.com/kalebhirshfield/portfolio",
+    "demo": "https://github.com/kalebhirshfield/portfolio"
+  }
+]
