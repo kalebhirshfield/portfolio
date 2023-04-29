@@ -1,4 +1,4 @@
 module.exports = {
-  siteUrl: "https://portfolio-boilerplate-nextjs.vercel.app",
+  siteUrl: "https://kalebhirshfield.pro",
   generateRobotsTxt: true,
 };
