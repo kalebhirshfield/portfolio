@@ -62,9 +62,9 @@ const About = () => {
         >
           <Box>
             <Text py="4" fontSize={["3xl", "4xl"]} fontWeight="700">
-              As a Jewish A Level student studying maths, physics and computer
+              As an A Level student studying maths, physics and computer
               science, I strive for success in engineering and software
-              development, with car racing being my main hobby
+              development, with car racing being my main hobby.
             </Text>
           </Box>
         </Box>
