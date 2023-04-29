@@ -1,4 +1,4 @@
-import { Box, Text, useColorModeValue } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 import ProjectCard from "../components/UI/ProjectCard";
 import styles from "../styles/Projects.module.css";
