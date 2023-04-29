@@ -1,14 +1,13 @@
-import { Box, Heading, Text, useColorModeValue } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
-import NextImage from "next/image";
+import ProjectCard from "../components/UI/ProjectCard";
+import styles from "../styles/Projects.module.css";
+import { getProjects } from "./api/projects";
 
-import { seo, data } from "config";
+import { seo } from "config";
 import FadeIn from "@rcnoverwatcher/react-fade-in-react-18/lib/FadeIn";
 
-const Projects = () => {
-  const color = useColorModeValue("telegram.500", "telegram.400");
-
-  const isOdd = (num) => num % 2;
+const Projects = ({ projects }) => {
 
   const title = "Kaleb Hirshfield - Projects";
   const description = seo.description;
@@ -20,77 +19,28 @@ const Projects = () => {
           title={title}
           description={description}
           canonical={seo.canonical}
-          openGraph={{
-            title,
-            description,
-            images: [
-              {
-                url: `${seo.canonical}personalLogo.png`,
-                width: "350px",
-                height: "350px",
-                alt: "my logo",
-              },
-            ],
-          }}
         />
-
-        <Box
-          as="section"
-          d="flex"
-          alignItems="center"
-          flexDir="column"
-          textAlign="center"
-          py="4"
-        >
-          <Box>
+          <Box className={"text-center"}>
             <Text py="4" fontSize={["3xl", "4xl"]} fontWeight="700">
-              Under construction...
+              My Projects
             </Text>
           </Box>
-        </Box>
-
-        <Box
-          as="section"
-          d="flex"
-          alignItems="center"
-          flexDir="column"
-          textAlign={{ base: "center", lg: "left" }}
-          py="4"
-        >
-          {data.map((item, index) => (
-            <Box
-              d={{ lg: "flex" }}
-              justifyContent={{ lg: "center" }}
-              alignItems={{ lg: "center" }}
-              flexDir={{ lg: isOdd(index) == 1 && "row-reverse" }}
-              key={index}
-            >
-              <Box
-                w={{ base: "80%", lg: "35%" }}
-                mx={{ base: "auto", lg: "0" }}
-                pl={{ lg: isOdd(index) == 1 && "10" }}
-                pr={{ lg: isOdd(index) == 0 && "10" }}
-              >
-                <NextImage
-                  src={item.image}
-                  width="500"
-                  height="500"
-                  alt={item.title}
-                  placeholder="blur"
-                  blurDataURL="L8LE.{~60000_3V@ITx^00t:V?-P"
-                />
-              </Box>
-
-              <Box w={{ lg: "50%" }}>
-                <Heading as="h1">{item.title}</Heading>
-                <Text py="4">{item.description}</Text>
-              </Box>
-            </Box>
-          ))}
-        </Box>
+          <div className={styles.container}>
+              {projects.map((project) => (
+                  <ProjectCard key={project.id} project={project} />
+              ))}
+          </div>
       </FadeIn>
     </>
   );
 };
+
+export async function getStaticProps() {
+  const projects = getProjects();
+
+  return {
+    props: { projects },
+  };
+}
 
 export default Projects;
