@@ -61,7 +61,7 @@ const Home = () => {
             priority
           />
           <Box>
-            <Heading as="h1" fontSize="4xl" fontWeight="500" py="2">
+            <Heading as="h1" fontSize="2xl" fontWeight="500" py="2">
               <Typewriter
                 options={{
                   autoStart: true,
