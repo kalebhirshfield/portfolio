@@ -2,6 +2,7 @@ import { Box, Heading, Text, useColorModeValue } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 import NextImage from "next/image";
 import FadeIn from "@rcnoverwatcher/react-fade-in-react-18";
+import Typewriter from 'typewriter-effect';
 
 import { seo, data } from "config";
 
@@ -54,16 +55,21 @@ const Home = () => {
           />
           <Box>
             <Heading
-              className="typewriter"
               as="h1"
               fontSize="2xl"
               fontWeight="500"
               py="2"
             >
-              Hello, I'm Kaleb.{" "}
-              <span role="img" aria-label="hand">
-                👋🏻
-              </span>
+              <Typewriter
+                  options={{
+                    autoStart: true,
+                    delay: 75,
+                  }}
+                  onInit={(typewriter) => {
+                    typewriter.typeString("Hello, I'm Kaleb.")
+                        .start();
+                  }}
+              />
             </Heading>
             <Heading fontSize={["3xl", "4xl"]} fontWeight="700">
               <Text as="span" color={color}>
@@ -101,14 +107,14 @@ const Home = () => {
               d={{ lg: "flex" }}
               justifyContent={{ lg: "center" }}
               alignItems={{ lg: "center" }}
-              flexDir={{ lg: isOdd(index) == 1 && "row-reverse" }}
+              flexDir={{ lg: isOdd(index) === 1 && "row-reverse" }}
               key={index}
             >
               <Box
                 w={{ base: "80%", lg: "35%" }}
                 mx={{ base: "auto", lg: "0" }}
-                pl={{ lg: isOdd(index) == 1 && "10" }}
-                pr={{ lg: isOdd(index) == 0 && "10" }}
+                pl={{ lg: isOdd(index) === 1 && "10" }}
+                pr={{ lg: isOdd(index) === 0 && "10" }}
               >
                 <NextImage
                   src={item.image}
