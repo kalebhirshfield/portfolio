@@ -1,5 +1,10 @@
 import { useState } from "react";
-import { Box, chakra, useColorModeValue } from "@chakra-ui/react";
+import {
+  Box,
+  chakra,
+  useColorModeValue,
+  AbsoluteCenter,
+} from "@chakra-ui/react";
 import NextLink from "next/link";
 
 import HamburgerMenu from "../UI/hamburgerMenu";
@@ -23,55 +28,56 @@ const Navbar = () => {
       alignItems="center"
       fontWeight="500"
     >
-      <HamburgerMenu toggled={isOpen} toggle={setIsOpen} />
-      <chakra.ul
-        bg={{ base: bg, lg: "transparent" }}
-        color={{ base: "black", lg: color }}
-        display={{
-          base: isOpen ? "block" : "none",
-          lg: "flex",
-        }}
-        position={{ base: "absolute", lg: "static" }}
-        top="5rem"
-        left="5%"
-        right="5%"
-        rounded={{ base: "lg", lg: "none" }}
-        py={{ base: "2", lg: "0" }}
-        px={{ base: "4", lg: "0" }}
-        alignItems={{ lg: "center" }}
-        boxShadow={{ base: "xl", lg: "none" }}
-        zIndex="2"
-      >
-        <chakra.li
-          listStyleType="none"
-          px={{ lg: "8" }}
-          py={{ base: "3", lg: "0" }}
+      <AbsoluteCenter axis="horizontal">
+        <HamburgerMenu toggled={isOpen} toggle={setIsOpen} />
+        <chakra.ul
+          bg={{ base: bg, lg: "transparent" }}
+          color={{ base: "black", lg: color }}
+          display={{
+            base: isOpen ? "block" : "none",
+            lg: "flex",
+          }}
+          position={{ base: "absolute", lg: "static" }}
+          top="5rem"
+          left="5%"
+          right="5%"
+          rounded={{ base: "lg", lg: "none" }}
+          py={{ base: "2", lg: "0" }}
+          px={{ base: "4", lg: "0" }}
+          alignItems={{ lg: "center" }}
+          boxShadow={{ base: "xl", lg: "none" }}
+          zIndex="2"
         >
-          <NextLink href="/" onClick={closeMenu}>
-            Home
-          </NextLink>
-        </chakra.li>
-        <chakra.li
-          listStyleType="none"
-          px={{ lg: "8" }}
-          py={{ base: "3", lg: "0" }}
-        >
-          <NextLink href="/projects" onClick={closeMenu}>
-            Projects
-          </NextLink>
-        </chakra.li>
-        <chakra.li
-          listStyleType="none"
-          px={{ lg: "8" }}
-          py={{ base: "3", lg: "0" }}
-        >
-          <NextLink href="/about" onClick={closeMenu}>
-            About
-          </NextLink>
-        </chakra.li>
-      </chakra.ul>
-
-      <ColorModeToggle />
+          <chakra.li
+            listStyleType="none"
+            px={{ lg: "8" }}
+            py={{ base: "3", lg: "0" }}
+          >
+            <NextLink href="/" onClick={closeMenu}>
+              Home
+            </NextLink>
+          </chakra.li>
+          <chakra.li
+            listStyleType="none"
+            px={{ lg: "8" }}
+            py={{ base: "3", lg: "0" }}
+          >
+            <NextLink href="/projects" onClick={closeMenu}>
+              Projects
+            </NextLink>
+          </chakra.li>
+          <chakra.li
+            listStyleType="none"
+            px={{ lg: "8" }}
+            py={{ base: "3", lg: "0" }}
+          >
+            <NextLink href="/about" onClick={closeMenu}>
+              About
+            </NextLink>
+          </chakra.li>
+          <ColorModeToggle />
+        </chakra.ul>
+      </AbsoluteCenter>
     </Box>
   );
 };
