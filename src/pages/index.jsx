@@ -18,7 +18,7 @@ const Home = () => {
 
   const isOdd = (num) => num % 2;
 
-  const title = "Kaleb Hirshfield - Home";
+  const title = "Home";
   const description = seo.description;
 
   return (

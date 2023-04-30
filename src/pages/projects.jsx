@@ -8,8 +8,7 @@ import { seo } from "config";
 import FadeIn from "@rcnoverwatcher/react-fade-in-react-18/lib/FadeIn";
 
 const Projects = ({ projects }) => {
-
-  const title = "Kaleb Hirshfield - Projects";
+  const title = "Projects";
   const description = seo.description;
 
   return (
@@ -20,16 +19,16 @@ const Projects = ({ projects }) => {
           description={description}
           canonical={seo.canonical}
         />
-          <Box className={"text-center"}>
-            <Text py="4" fontSize={["3xl", "4xl"]} fontWeight="700">
-              My Projects
-            </Text>
-          </Box>
-          <div className={styles.container}>
-              {projects.map((project) => (
-                  <ProjectCard key={project.id} project={project} />
-              ))}
-          </div>
+        <Box className={"text-center"}>
+          <Text py="4" fontSize={["3xl", "4xl"]} fontWeight="700">
+            My Projects
+          </Text>
+        </Box>
+        <div className={styles.container}>
+          {projects.map((project) => (
+            <ProjectCard key={project.id} project={project} />
+          ))}
+        </div>
       </FadeIn>
     </>
   );

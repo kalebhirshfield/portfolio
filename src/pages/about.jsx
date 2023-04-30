@@ -10,7 +10,7 @@ const About = () => {
 
   const isOdd = (num) => num % 2;
 
-  const title = "Kaleb Hirshfield - About";
+  const title = "About";
   const description = seo.description;
 
   return (
