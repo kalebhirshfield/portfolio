@@ -18,6 +18,18 @@ const Projects = ({ projects }) => {
           title={title}
           description={description}
           canonical={seo.canonical}
+          openGraph={{
+            title,
+            description,
+            images: [
+              {
+                url: `${seo.canonical}personalLogo.png`,
+                width: "350px",
+                height: "350px",
+                alt: "my logo",
+              },
+            ],
+          }}
         />
         <Box className={"text-center"}>
           <Text py="4" fontSize={["3xl", "4xl"]} fontWeight="700">
