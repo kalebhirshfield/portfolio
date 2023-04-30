@@ -25,7 +25,7 @@ const About = () => {
             description,
             images: [
               {
-                url: `${seo.canonical}aboutMe.png`,
+                url: `${seo.canonical}aboutMe.jpg`,
                 width: "350px",
                 height: "350px",
                 alt: "picture of me",
@@ -43,7 +43,7 @@ const About = () => {
         >
           <NextImage
             className="logo"
-            src="/aboutMe.png"
+            src="/aboutMe.jpg"
             width="350"
             height="350"
             alt="picture of me"
