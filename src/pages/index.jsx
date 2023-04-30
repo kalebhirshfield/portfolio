@@ -78,6 +78,13 @@ const Home = () => {
             <ChakraLink className="links" href="/about" mx="2">
               <Button>About</Button>
             </ChakraLink>
+            <ChakraLink
+              className="links"
+              href="mailto:me@kalebhirshfield.pro"
+              mx="2"
+            >
+              <Button>Email Me</Button>
+            </ChakraLink>
           </Box>
         </Box>
 
