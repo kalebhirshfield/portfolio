@@ -47,6 +47,7 @@ const Footer = () => {
               href={item.path}
               aria-label={item.title}
               mx="2"
+              my="2"
               _focus={{ outline: "none" }}
               key={index}
               isExternal
