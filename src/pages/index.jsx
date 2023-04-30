@@ -72,16 +72,12 @@ const Home = () => {
                 }}
               />
             </Heading>
-            <Button>
-              <ChakraLink className="links" href="/about">
-                Projects
-              </ChakraLink>
-            </Button>
-            <Button>
-              <ChakraLink className="links" href="/about">
-                About Me
-              </ChakraLink>
-            </Button>
+            <ChakraLink className="links" href="/projects" mx="2">
+              <Button>Projects</Button>
+            </ChakraLink>
+            <ChakraLink className="links" href="/about" mx="2">
+              <Button>About</Button>
+            </ChakraLink>
           </Box>
         </Box>
 
