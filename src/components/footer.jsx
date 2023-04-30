@@ -20,6 +20,11 @@ const socialAccounts = [
     path: "https://www.instagram.com/kalebhirshfield",
     title: "Instagram",
   },
+  {
+    icon: FaCode,
+    path: "https://github.com/kalebhirshfield/portfolio",
+    title: "Source Code",
+  },
 ];
 
 const Footer = () => {
@@ -51,17 +56,6 @@ const Footer = () => {
               </Button>
             </ChakraLink>
           ))}
-        </Box>
-        <Box py="2">
-          <ChakraLink
-            href="https://github.com/kalebhirshfield/portfolio"
-            aria-label="source code"
-            isExternal
-          >
-            <Button aria-label="source code">
-              <Icon as={FaCode} w="6" h="6" />
-            </Button>
-          </ChakraLink>
         </Box>
       </Box>
     </Box>
