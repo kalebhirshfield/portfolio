@@ -61,7 +61,12 @@ const About = () => {
           py="4"
         >
           <Box>
-            <Text py="4" fontSize={["3xl", "4xl"]} fontWeight="700">
+            <Text
+              className="header"
+              py="4"
+              fontSize={["3xl", "4xl"]}
+              fontWeight="700"
+            >
               As an A Level student studying maths, physics and computer
               science, I strive for success in engineering and software
               development, with car racing being my main hobby.
