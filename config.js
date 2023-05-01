@@ -2,7 +2,7 @@ export const seo = {
   title: "Kaleb Hirshfield",
   description:
     "Kaleb Hirshfield is a British A Level student.",
-  canonical: "https://kalebhirshfield.pro/",
+  canonical: "https://www.kalebhirshfield.pro/",
 };
 
 export const data = [
