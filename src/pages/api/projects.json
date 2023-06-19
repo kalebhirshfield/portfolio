@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "SolarX",
-    "image": "/solarx.png",
+    "image": "https://user-images.githubusercontent.com/108481836/235510861-86344cc5-da30-403a-befd-13bc69fd38e4.png",
     "description": "As part of the initiative to help accelerate the transition to renewable energy, our product, Solar X, envisions a brighter future for generations to come. By empowering the user to enlighten the potential earnings they would make by installing solar panels, we encourage the propagation of solar energy into the framework of society. ",
     "tags": ["Python", "Raspberry Pi"],
     "source_code": "https://github.com/JaVelin-Team/SolarX",
