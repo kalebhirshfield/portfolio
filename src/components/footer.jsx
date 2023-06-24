@@ -20,11 +20,6 @@ const socialAccounts = [
     path: "https://www.instagram.com/kalebhirshfield",
     title: "Instagram",
   },
-  {
-    icon: FaCode,
-    path: "https://github.com/kalebhirshfield/portfolio",
-    title: "Source Code",
-  },
 ];
 
 const Footer = () => {
