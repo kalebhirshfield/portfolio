@@ -86,7 +86,7 @@ const Home = () => {
             </ChakraLink>
             <ChakraLink
               className="links"
-              href="mailto:me@kalebhirshfield.pro"
+              href="mailto:me@kalebhirshfield.com"
               mx="2"
             >
               <Button>Email Me</Button>
