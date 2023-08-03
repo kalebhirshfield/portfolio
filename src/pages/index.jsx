@@ -76,6 +76,7 @@ const Home = () => {
                 }}
                 onInit={(typewriter) => {
                   typewriter.typeString("Hello, I'm Kaleb.").start();
+                  <newline />;
                   typewriter
                     .typeString(
                       "Currently studying Computer Science, Physics and Maths."
