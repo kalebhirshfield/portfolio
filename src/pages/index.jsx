@@ -75,11 +75,9 @@ const Home = () => {
                   delay: 75,
                 }}
                 onInit={(typewriter) => {
-                  typewriter.typeString("Hello, I'm Kaleb.").start();
-                  <newline />;
                   typewriter
                     .typeString(
-                      "Currently studying Computer Science, Physics and Maths."
+                      "Hello, I'm Kaleb. Currently studying Computer Science, Physics and Maths."
                     )
                     .start();
                 }}
