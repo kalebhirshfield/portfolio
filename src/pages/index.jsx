@@ -77,7 +77,7 @@ const Home = () => {
                 onInit={(typewriter) => {
                   typewriter
                     .typeString(
-                      "Hello, I'm Kaleb. Currently studying Computer Science, Physics and Maths."
+                      "Hello, I'm Kaleb. Studying Computer Science, Physics and Maths."
                     )
                     .start();
                 }}
