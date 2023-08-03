@@ -76,14 +76,6 @@ const Home = () => {
                 }}
                 onInit={(typewriter) => {
                   typewriter.typeString("Hello, I'm Kaleb.").start();
-                }}
-              />
-              <Typewriter
-                options={{
-                  autoStart: true,
-                  delay: 75,
-                }}
-                onInit={(typewriter) => {
                   typewriter
                     .typeString(
                       "Currently studying Computer Science, Physics and Maths."
