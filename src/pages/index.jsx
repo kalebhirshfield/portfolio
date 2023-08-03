@@ -67,6 +67,7 @@ const Home = () => {
               fontSize="2xl"
               fontWeight="500"
               py="2"
+              margin="10"
             >
               <Typewriter
                 options={{
@@ -75,6 +76,19 @@ const Home = () => {
                 }}
                 onInit={(typewriter) => {
                   typewriter.typeString("Hello, I'm Kaleb.").start();
+                }}
+              />
+              <Typewriter
+                options={{
+                  autoStart: true,
+                  delay: 75,
+                }}
+                onInit={(typewriter) => {
+                  typewriter
+                    .typeString(
+                      "Currently studying Computer Science, Physics and Maths."
+                    )
+                    .start();
                 }}
               />
             </Heading>
