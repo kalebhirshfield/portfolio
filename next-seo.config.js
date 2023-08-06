@@ -1,7 +1,7 @@
 import { seo } from "config";
 
 export default {
-  titleTemplate: `${seo.title} | %s`,
+  titleTemplate: `%s | ${seo.title}`,
   openGraph: {
     type: "website",
     locale: "en_GB",
