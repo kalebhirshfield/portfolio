@@ -25,7 +25,7 @@ const Navbar = () => {
       as="nav"
       display="flex"
       flexDir={{ base: "row-reverse", lg: "row" }}
-      alignItems="center"
+      alignItems="flex-start"
       fontWeight="500"
     >
       <AbsoluteCenter axis="horizontal">
