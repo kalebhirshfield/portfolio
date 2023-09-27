@@ -14,5 +14,13 @@
     "description": "A data manager created using the Flet framework for Python. Retrieves data from a PostgreSQL database.",
     "tags": ["Python", "Flet"],
     "source_code": "https://github.com/kalebhirshfield/ComputingNEA"
+  },
+  {
+    "id": 3,
+    "name": "ChatGPT UI",
+    "image":"/chatgpt.png",
+    "description": "A UI for the ChatGPT API developed using the Flet framework for Python. Allows users to chat with an AI.",
+    "tags": ["Python", "Flet", "AI"],
+    "source_code": "https://github.com/kalebhirshfield/ChatGPT-UI"
   }
 ]

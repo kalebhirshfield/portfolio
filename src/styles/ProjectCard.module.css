@@ -4,6 +4,7 @@
   border-radius: 20px;
   cursor: default;
   background-color: #2c313d;
+  max-width: fit-content;
 }
 
 .card:hover {
