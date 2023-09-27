@@ -72,7 +72,7 @@ const Home = () => {
               <Typewriter
                 options={{
                   autoStart: true,
-                  delay: 75,
+                  delay: 50,
                 }}
                 onInit={(typewriter) => {
                   typewriter
