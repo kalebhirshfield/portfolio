@@ -9,7 +9,7 @@ const Header = () => {
       <Box
         display="flex"
         justifyContent="space-between"
-        alignItems="center"
+        alignItems="flex-start"
         h="4rem"
         px={[4, 6, 10, 14, 20]}
         maxW={MAX_WIDTH}
