@@ -12,6 +12,7 @@ const DarkModeToggle = () => {
       ml={{ lg: "6" }}
       variant="ghost"
       _hover={{ color: "black", bgColor: "white" }}
+      color={colorMode === "light" ? "black" : "white"}
       onClick={toggleColorMode}
     >
       {colorMode === "light" ? (

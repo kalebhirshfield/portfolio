@@ -1,13 +1,11 @@
-import { Box, Heading, Text, useColorModeValue } from "@chakra-ui/react";
+import { Box, Heading, Text } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 import NextImage from "next/image";
 
 import { seo, data } from "config";
-import FadeIn from "@rcnoverwatcher/react-fade-in-react-18/lib/FadeIn";
+import { motion } from "framer-motion";
 
 const About = () => {
-  const color = useColorModeValue("telegram.500", "telegram.400");
-
   const isOdd = (num) => num % 2;
 
   const title = "About";
@@ -15,7 +13,11 @@ const About = () => {
 
   return (
     <>
-      <FadeIn>
+      <motion.main
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
         <NextSeo
           title={title}
           description={description}
@@ -87,14 +89,14 @@ const About = () => {
               d={{ lg: "flex" }}
               justifyContent={{ lg: "center" }}
               alignItems={{ lg: "center" }}
-              flexDir={{ lg: isOdd(index) == 1 && "row-reverse" }}
+              flexDir={{ lg: isOdd(index) === 1 && "row-reverse" }}
               key={index}
             >
               <Box
                 w={{ base: "80%", lg: "35%" }}
                 mx={{ base: "auto", lg: "0" }}
-                pl={{ lg: isOdd(index) == 1 && "10" }}
-                pr={{ lg: isOdd(index) == 0 && "10" }}
+                pl={{ lg: isOdd(index) === 1 && "10" }}
+                pr={{ lg: isOdd(index) === 0 && "10" }}
               >
                 <NextImage
                   src={item.image}
@@ -113,7 +115,7 @@ const About = () => {
             </Box>
           ))}
         </Box>
-      </FadeIn>
+      </motion.main>
     </>
   );
 };

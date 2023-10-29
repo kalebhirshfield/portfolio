@@ -8,9 +8,13 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
     images: {
-        domains: [
-            "kalebhirshfielduk.files.wordpress.com",
-            "i.imgur.com"
+        remotePatterns: [
+            {
+                hostname: "kalebhirshfielduk.files.wordpress.com",
+            },
+            {
+                hostname: "i.imgur.com",
+            }
         ],
     }
 };

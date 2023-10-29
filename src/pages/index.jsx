@@ -2,20 +2,17 @@ import {
   Box,
   Heading,
   Text,
-  useColorModeValue,
   Button,
   Link as ChakraLink,
 } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 import NextImage from "next/image";
-import FadeIn from "@rcnoverwatcher/react-fade-in-react-18";
 import Typewriter from "typewriter-effect";
+import { motion } from "framer-motion";
 
 import { seo, data } from "config";
 
 const Home = () => {
-  const color = useColorModeValue("telegram.500", "telegram.400");
-
   const isOdd = (num) => num % 2;
 
   const title = "Home";
@@ -23,7 +20,11 @@ const Home = () => {
 
   return (
     <>
-      <FadeIn>
+      <motion.main
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
         <NextSeo
           title={title}
           description={description}
@@ -77,7 +78,7 @@ const Home = () => {
                 onInit={(typewriter) => {
                   typewriter
                     .typeString(
-                      "Hello, I'm Kaleb. Studying Computer Science, Physics and Maths."
+                      "Hello, I'm Kaleb. Studying Computer Science, Physics and Maths.",
                     )
                     .start();
                 }}
@@ -138,7 +139,7 @@ const Home = () => {
             </Box>
           ))}
         </Box>
-      </FadeIn>
+      </motion.main>
     </>
   );
 };
