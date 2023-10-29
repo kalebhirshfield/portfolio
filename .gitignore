@@ -32,3 +32,9 @@ yarn-error.log*
 
 # vercel
 .vercel
+/.idea/.gitignore
+/.idea/kaleb-portfolio.iml
+/.idea/modules.xml
+/package-lock.json
+/.idea/prettier.xml
+/.idea/vcs.xml

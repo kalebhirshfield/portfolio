@@ -3,9 +3,9 @@ import { NextSeo } from "next-seo";
 import ProjectCard from "../components/UI/ProjectCard";
 import styles from "../styles/Projects.module.css";
 import { getProjects } from "./api/projects";
+import { motion } from "framer-motion";
 
 import { seo } from "config";
-import FadeIn from "@rcnoverwatcher/react-fade-in-react-18/lib/FadeIn";
 
 const Projects = ({ projects }) => {
   const title = "Projects";
@@ -13,7 +13,11 @@ const Projects = ({ projects }) => {
 
   return (
     <>
-      <FadeIn>
+      <motion.main
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
         <NextSeo
           title={title}
           description={description}
@@ -41,7 +45,7 @@ const Projects = ({ projects }) => {
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
-      </FadeIn>
+      </motion.main>
     </>
   );
 };
